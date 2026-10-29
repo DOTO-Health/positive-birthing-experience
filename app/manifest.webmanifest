@@ -1,0 +1,16 @@
+{
+  "name": "Positive Birthing Companion",
+  "short_name": "Birthing Companion",
+  "start_url": "./",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "background_color": "#FFF6EC",
+  "theme_color": "#D9663A",
+  "icons": [
+    {
+      "src": "assets/logo.png",
+      "sizes": "any",
+      "type": "image/png"
+    }
+  ]
+}

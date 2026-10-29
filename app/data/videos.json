@@ -1,0 +1,89 @@
+{
+  "note": "Set src (relative path or URL), license, author and source_url when a licensed video is added. Entries with src=null show a 'coming soon' state.",
+  "categories": [
+    "breathe",
+    "body",
+    "movement",
+    "stretch"
+  ],
+  "videos": [
+    {
+      "id": "belly-breathing",
+      "title": "Slow belly breathing",
+      "category": "breathe",
+      "minutes": 3,
+      "stage": "Any stage",
+      "status": "Footage to commission",
+      "src": null,
+      "poster": null,
+      "license": null,
+      "author": null,
+      "source_url": null
+    },
+    {
+      "id": "whole-body-relax",
+      "title": "Whole-body relaxation",
+      "category": "body",
+      "minutes": 8,
+      "stage": "Any stage",
+      "status": "Footage to commission",
+      "src": null,
+      "poster": null,
+      "license": null,
+      "author": null,
+      "source_url": null
+    },
+    {
+      "id": "pelvic-tilts",
+      "title": "Cat-cow and pelvic tilts",
+      "category": "movement",
+      "minutes": 5,
+      "stage": "2nd–3rd trimester",
+      "status": "Clinical review needed",
+      "src": null,
+      "poster": null,
+      "license": null,
+      "author": null,
+      "source_url": null
+    },
+    {
+      "id": "birth-ball",
+      "title": "Birth-ball rocking",
+      "category": "movement",
+      "minutes": 4,
+      "stage": "Labour",
+      "status": "Evidence check needed",
+      "src": null,
+      "poster": null,
+      "license": null,
+      "author": null,
+      "source_url": null
+    },
+    {
+      "id": "squat-hip",
+      "title": "Gentle squat and hip opener",
+      "category": "stretch",
+      "minutes": 6,
+      "stage": "3rd trimester",
+      "status": "Clinical review needed",
+      "src": null,
+      "poster": null,
+      "license": null,
+      "author": null,
+      "source_url": null
+    },
+    {
+      "id": "back-massage",
+      "title": "Companion back-massage",
+      "category": "body",
+      "minutes": 3,
+      "stage": "Labour",
+      "status": "Footage to commission",
+      "src": null,
+      "poster": null,
+      "license": null,
+      "author": null,
+      "source_url": null
+    }
+  ]
+}

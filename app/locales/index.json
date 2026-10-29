@@ -1,0 +1,96 @@
+{
+  "source_language": "en",
+  "languages": [
+    {
+      "code": "en",
+      "language": "English",
+      "native_name": "English",
+      "dir": "ltr",
+      "confidence": "source"
+    },
+    {
+      "code": "hi",
+      "language": "Hindi",
+      "native_name": "हिन्दी",
+      "dir": "ltr",
+      "confidence": "medium"
+    },
+    {
+      "code": "kn",
+      "language": "Kannada",
+      "native_name": "ಕನ್ನಡ",
+      "dir": "ltr",
+      "confidence": "medium"
+    },
+    {
+      "code": "ta",
+      "language": "Tamil",
+      "native_name": "தமிழ்",
+      "dir": "ltr",
+      "confidence": "medium"
+    },
+    {
+      "code": "ml",
+      "language": "Malayalam",
+      "native_name": "മലയാളം",
+      "dir": "ltr",
+      "confidence": "medium"
+    },
+    {
+      "code": "te",
+      "language": "Telugu",
+      "native_name": "తెలుగు",
+      "dir": "ltr",
+      "confidence": "medium"
+    },
+    {
+      "code": "mr",
+      "language": "Marathi",
+      "native_name": "मराठी",
+      "dir": "ltr",
+      "confidence": "medium"
+    },
+    {
+      "code": "gu",
+      "language": "Gujarati",
+      "native_name": "ગુજરાતી",
+      "dir": "ltr",
+      "confidence": "medium"
+    },
+    {
+      "code": "as",
+      "language": "Assamese",
+      "native_name": "অসমীয়া",
+      "dir": "ltr",
+      "confidence": "medium"
+    },
+    {
+      "code": "or",
+      "language": "Odia",
+      "native_name": "ଓଡ଼ିଆ",
+      "dir": "ltr",
+      "confidence": "medium"
+    },
+    {
+      "code": "bn",
+      "language": "Bengali",
+      "native_name": "বাংলা",
+      "dir": "ltr",
+      "confidence": "medium"
+    },
+    {
+      "code": "pa",
+      "language": "Punjabi",
+      "native_name": "ਪੰਜਾਬੀ",
+      "dir": "ltr",
+      "confidence": "medium"
+    },
+    {
+      "code": "ur",
+      "language": "Urdu",
+      "native_name": "اردو",
+      "dir": "rtl",
+      "confidence": "medium"
+    }
+  ]
+}

@@ -74,24 +74,93 @@ This is the planned layout. No application code has been published yet — see
 [Status & Roadmap](#status--roadmap).
 
 ```
-├── src/                     # application code (planned, not yet published)
-│   ├── sound_and_calm/       # Module 1 — music library & player
-│   ├── hydration_check/      # Module 2 — rule-based assessment logic
-│   ├── move_and_ease/        # Module 3 — video library & player
-│   └── learn/                # Module 4 — FAQ + search
-├── content/
-│   ├── music/                 # CC-licensed / commissioned audio (planned)
-│   ├── video/                 # CC-licensed / commissioned exercise & breathing videos (planned)
-│   └── learn-faq/             # WHO-sourced FAQ content, per language (planned)
-├── docs/                    # developer documentation (GitHub Pages)
-├── assets/
+.
 ├── ARCHITECTURE.md
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+├── LICENSE.md
+├── MAINTAINERS.md
 ├── PROJECT_CHARTER.md
 ├── QA_PROCESS.md
-├── CONTRIBUTING.md
-├── CODE_OF_CONDUCT.md
-├── LICENSE.md
-└── README.md
+├── README.md
+├── app                 # application code
+│   ├── README.md
+│   ├── assets
+│   │   ├── audio
+│   │   │   ├── blessing.mp3
+│   │   │   ├── blossom.mp3
+│   │   │   ├── celebration-of-life.mp3
+│   │   │   ├── earth.mp3
+│   │   │   ├── floating.mp3
+│   │   │   ├── hypnobirthing-breathing.mp3
+│   │   │   ├── motion.mp3
+│   │   │   ├── movement.mp3
+│   │   │   ├── mozart-effect.mp3
+│   │   │   ├── pregnancy-music.mp3
+│   │   │   ├── relaxing-432-untitled.mp3
+│   │   │   ├── sanctuary.mp3
+│   │   │   ├── the-deep.mp3
+│   │   │   ├── timing.mp3
+│   │   │   └── tuning.mp3
+│   │   └── logo.png
+│   ├── css
+│   │   └── styles.css
+│   ├── data
+│   │   ├── facts.json
+│   │   ├── hydration-rules.json
+│   │   ├── learn.json
+│   │   ├── tracks.json
+│   │   └── videos.json
+│   ├── index.html
+│   ├── js
+│   │   ├── app.js
+│   │   ├── art.js
+│   │   ├── core.js
+│   │   ├── home.js
+│   │   ├── hydration.js
+│   │   ├── learn.js
+│   │   ├── move.js
+│   │   ├── player.js
+│   │   └── sound.js
+│   ├── locales
+│   │   ├── archive
+│   │   │   ├── brx.json
+│   │   │   ├── doi.json
+│   │   │   ├── kok.json
+│   │   │   ├── ks.json
+│   │   │   ├── mai.json
+│   │   │   ├── mni.json
+│   │   │   ├── ne.json
+│   │   │   ├── sa.json
+│   │   │   ├── sat.json
+│   │   │   └── sd.json
+│   │   ├── as.json
+│   │   ├── bn.json
+│   │   ├── en.json
+│   │   ├── gu.json
+│   │   ├── hi.json
+│   │   ├── index.json
+│   │   ├── kn.json
+│   │   ├── ml.json
+│   │   ├── mr.json
+│   │   ├── or.json
+│   │   ├── pa.json
+│   │   ├── ta.json
+│   │   ├── te.json
+│   │   └── ur.json
+│   ├── manifest.webmanifest
+│   └── sw.js
+├── assets
+│   └── doto-trademark.jpeg
+├── docs
+│   ├── _config.yml
+│   ├── assets
+│   │   └── doto-trademark.jpeg
+│   ├── getting-started.md
+│   ├── index.md
+│   └── model-setup.md
+└── tools
+    └── serve.mjs
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

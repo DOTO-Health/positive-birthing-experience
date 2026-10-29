@@ -1,0 +1,144 @@
+{
+  "categories": [
+    "calm",
+    "instrumental",
+    "spiritual"
+  ],
+  "tracks": [
+    {
+      "id": "floating",
+      "file": "assets/audio/floating.mp3",
+      "title": "Floating",
+      "artist": "Liborio Conti · 432 Hz",
+      "category": "calm",
+      "scene": "cloud",
+      "license": "CC (confirmed by content owner; type and attribution to be recorded)"
+    },
+    {
+      "id": "blossom",
+      "file": "assets/audio/blossom.mp3",
+      "title": "Blossom",
+      "artist": "Liborio Conti · 432 Hz",
+      "category": "calm",
+      "scene": "blossom",
+      "license": "CC (confirmed by content owner; type and attribution to be recorded)"
+    },
+    {
+      "id": "earth",
+      "file": "assets/audio/earth.mp3",
+      "title": "Earth",
+      "artist": "Liborio Conti · 432 Hz",
+      "category": "calm",
+      "scene": "hills",
+      "license": "CC (confirmed by content owner; type and attribution to be recorded)"
+    },
+    {
+      "id": "the-deep",
+      "file": "assets/audio/the-deep.mp3",
+      "title": "The Deep",
+      "artist": "Liborio Conti · 432 Hz",
+      "category": "calm",
+      "scene": "waves",
+      "license": "CC (confirmed by content owner; type and attribution to be recorded)"
+    },
+    {
+      "id": "pregnancy-music",
+      "file": "assets/audio/pregnancy-music.mp3",
+      "title": "Pregnancy Music for Mother and Baby",
+      "artist": null,
+      "category": "calm",
+      "scene": "lotus",
+      "license": "CC (confirmed by content owner; type and attribution to be recorded)"
+    },
+    {
+      "id": "hypnobirthing-breathing",
+      "file": "assets/audio/hypnobirthing-breathing.mp3",
+      "title": "Hypnobirthing Breathing Session",
+      "artist": null,
+      "category": "calm",
+      "scene": "rings",
+      "license": "CC (confirmed by content owner; type and attribution to be recorded)"
+    },
+    {
+      "id": "mozart-effect",
+      "file": "assets/audio/mozart-effect.mp3",
+      "title": "Mozart Effect (1 hour)",
+      "artist": null,
+      "category": "instrumental",
+      "scene": "notes",
+      "license": "CC (confirmed by content owner; type and attribution to be recorded)"
+    },
+    {
+      "id": "movement",
+      "file": "assets/audio/movement.mp3",
+      "title": "Movement",
+      "artist": "Liborio Conti · 432 Hz",
+      "category": "instrumental",
+      "scene": "waves",
+      "license": "CC (confirmed by content owner; type and attribution to be recorded)"
+    },
+    {
+      "id": "motion",
+      "file": "assets/audio/motion.mp3",
+      "title": "Motion",
+      "artist": "Liborio Conti · 432 Hz",
+      "category": "instrumental",
+      "scene": "cloud",
+      "license": "CC (confirmed by content owner; type and attribution to be recorded)"
+    },
+    {
+      "id": "timing",
+      "file": "assets/audio/timing.mp3",
+      "title": "Timing",
+      "artist": "Liborio Conti · 432 Hz",
+      "category": "instrumental",
+      "scene": "stars",
+      "license": "CC (confirmed by content owner; type and attribution to be recorded)"
+    },
+    {
+      "id": "tuning",
+      "file": "assets/audio/tuning.mp3",
+      "title": "Tuning",
+      "artist": "Liborio Conti · 432 Hz",
+      "category": "instrumental",
+      "scene": "rings",
+      "license": "CC (confirmed by content owner; type and attribution to be recorded)"
+    },
+    {
+      "id": "relaxing-432-untitled",
+      "file": "assets/audio/relaxing-432-untitled.mp3",
+      "title": "Relaxing 432 Hz (untitled)",
+      "artist": "Liborio Conti · 432 Hz",
+      "category": "instrumental",
+      "scene": "hills",
+      "license": "CC (confirmed by content owner; type and attribution to be recorded)"
+    },
+    {
+      "id": "sanctuary",
+      "file": "assets/audio/sanctuary.mp3",
+      "title": "Sanctuary",
+      "artist": "Liborio Conti · 432 Hz",
+      "category": "spiritual",
+      "scene": "sunrise",
+      "license": "CC (confirmed by content owner; type and attribution to be recorded)"
+    },
+    {
+      "id": "blessing",
+      "file": "assets/audio/blessing.mp3",
+      "title": "Blessing",
+      "artist": "Liborio Conti · 432 Hz",
+      "category": "spiritual",
+      "scene": "lotus",
+      "license": "CC (confirmed by content owner; type and attribution to be recorded)"
+    },
+    {
+      "id": "celebration-of-life",
+      "file": "assets/audio/celebration-of-life.mp3",
+      "title": "Celebration of Life",
+      "artist": null,
+      "category": "spiritual",
+      "scene": "sunrise",
+      "license": "CC (confirmed by content owner; type and attribution to be recorded)"
+    }
+  ]
+}

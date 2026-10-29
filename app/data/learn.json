@@ -1,0 +1,84 @@
+{
+  "cards": [
+    {
+      "icon": "🤝",
+      "tint": [
+        "#FFE7B8",
+        "#FFD08A"
+      ],
+      "source": "WHO 2018 · Respectful maternity care"
+    },
+    {
+      "icon": "👪",
+      "tint": [
+        "#FAD9C9",
+        "#F4B9A3"
+      ],
+      "source": "WHO 2018 · LaQshya · Cochrane CD003766"
+    },
+    {
+      "icon": "💬",
+      "tint": [
+        "#D6E8DC",
+        "#B3D1BD"
+      ],
+      "source": "WHO 2018 · Effective communication"
+    },
+    {
+      "icon": "🥤",
+      "tint": [
+        "#CDE5EE",
+        "#A8CFDF"
+      ],
+      "source": "WHO 2018 · Cochrane CD003930"
+    },
+    {
+      "icon": "🚶",
+      "tint": [
+        "#E4EBC9",
+        "#C8D69B"
+      ],
+      "source": "WHO 2018 · Mobility and position"
+    },
+    {
+      "icon": "🎶",
+      "tint": [
+        "#E9DAEB",
+        "#D4BAD8"
+      ],
+      "source": "WHO 2018 · Relaxation techniques (verify rec. number)"
+    },
+    {
+      "icon": "🚪",
+      "tint": [
+        "#FFE0D0",
+        "#F7BFA6"
+      ],
+      "source": "LaQshya · Privacy in the labour room"
+    },
+    {
+      "icon": "🔥",
+      "tint": [
+        "#FFEBC2",
+        "#FFD27A"
+      ],
+      "source": "WHO 2018 · Second stage (verify)"
+    },
+    {
+      "icon": "🍼",
+      "tint": [
+        "#FCD4D4",
+        "#F4A9A9"
+      ],
+      "source": "WHO 2022 · Postnatal care (verify)"
+    },
+    {
+      "icon": "🆘",
+      "tint": [
+        "#D9E2F5",
+        "#B3C5E8"
+      ],
+      "source": "WHO 2018 and 2022 · Referral and continuity"
+    }
+  ]
+}

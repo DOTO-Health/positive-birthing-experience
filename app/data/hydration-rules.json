@@ -1,0 +1,29 @@
+{
+  "_warning": "SAMPLE VALUES. Not clinically validated. The Clinical/Obstetric Advisory Board must set and sign off these numbers before deployment.",
+  "clinically_validated": false,
+  "intervals_min": [
+    30,
+    45,
+    60
+  ],
+  "default_interval_min": 45,
+  "temp_unit": "F",
+  "attention": {
+    "temp_min": 99.5,
+    "pulse_min": 101
+  },
+  "alert": {
+    "temp_min": 100.4,
+    "pulse_min": 120
+  },
+  "limits": {
+    "temp": [
+      90,
+      110
+    ],
+    "pulse": [
+      30,
+      220
+    ]
+  }
+}
