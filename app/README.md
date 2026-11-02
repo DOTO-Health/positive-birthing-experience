@@ -42,8 +42,24 @@ No accounts, no patient names or IDs. The labour clock and anonymous shift count
 
 ## Open items
 
-- Licence for code: PRD says MIT, Project Charter says Apache 2.0. Pick one and add a LICENSE file. Content (CC BY / BY-SA / CC0) needs per-track licence, author and source recorded.
-- No CC-licensed prenatal exercise video found yet; see `research/positive-birth-evidence.md`.
+- Code licence set to Apache-2.0 (per the Project Charter); the PRD said MIT. Confirm with the maintainers.
+- Prenatal videos: 91 CC BY videos found on YouTube, none downloaded or clinically reviewed; see `research/all-cc-videos.md`.
 - Native-speaker and clinical review of all 13 languages.
 - Fonts load from Google Fonts on first visit and are cached by the service worker; bundle the font files for fully offline first load.
-- Audio is not precached by the service worker (large files): bundle media with the deployment.
+- Add licensed music, then record each track in `legal/ATTRIBUTION.md`.
+
+## Licences
+
+| What | Licence |
+|---|---|
+| Source code (`app/js`, `app/css`, `tools`) | Apache-2.0 (`LICENSE`) |
+| Our own content (translations, learning cards, artwork, research notes) | CC BY-SA 4.0 (`LICENSES/CC-BY-SA-4.0.txt`) |
+| Linked YouTube videos | Creators' CC BY, credited in `legal/ATTRIBUTION.md`; not relicensed by us |
+| Logo and names | Trademarks of Doto Health, not open-licensed (`TRADEMARKS.md`) |
+| Music | **None included yet.** Sound & Calm shows "coming soon" until licensed tracks are added |
+
+Machine-translated text and hydration thresholds are drafts that have not been clinically reviewed.
+
+## Media is not in this repository
+
+No audio or video files are included. Earlier test music was removed because none of it was licensed for public redistribution (see `research/audio-licences.md`). Video entries in `app/data/videos.json` link to YouTube videos marked CC BY; see `research/english-cc-videos.md`. The `.gitignore` keeps local media out of the repository.

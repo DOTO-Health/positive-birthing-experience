@@ -1,0 +1,10 @@
+# Media that is not licensed for public redistribution (see research/github-publishing-checklist.md)
+app/assets/audio/
+extracted/
+*.zip
+# macOS / editor noise
+.DS_Store
+# Local tooling output
+.claude/
+# Local-only unlicensed media
+_private/

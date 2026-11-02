@@ -28,7 +28,7 @@ export async function mount(el, { go }) {
     <div class="hello" id="hello">${greetingHTML()}<small>${esc(t('home_prompt'))}</small></div>
     <div class="tiles">
       ${TILES.map(([k, cls]) => `
-        <button class="tile ${cls}" data-go="${k}"><span class="go" aria-hidden="true">›</span>${ICONS[k]}
+        <button class="tile ${cls}" data-go="${k}"><span class="go" aria-hidden="true">›</span>${k === 'sound' ? `<span class="soonbadge">${esc(t('coming_soon'))}</span>` : ''}${ICONS[k]}
           <span><h3>${esc(t(`${k === 'hydration' ? 'hydration' : k}_title`))}</h3><p>${esc(t(`${k === 'hydration' ? 'hydration' : k}_sub`))}</p></span></button>`).join('')}
     </div>
     <div class="impact">

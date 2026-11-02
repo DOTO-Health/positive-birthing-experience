@@ -91,6 +91,10 @@
     "close": "Close",
     "footer_offline": "Works offline · no patient names stored",
     "footer_note": "Supports clinical judgement; never replaces it",
-    "go": "Open"
+    "go": "Open",
+    "licence_needed": "Licence needed",
+    "coming_soon": "Coming soon",
+    "music_soon_title": "Music is coming soon",
+    "music_soon_body": "Calm, instrumental and spiritual tracks are being added."
   }
 }

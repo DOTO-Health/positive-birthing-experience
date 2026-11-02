@@ -65,6 +65,9 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid var(-
 .tcard .tx{padding:9px 14px 12px}
 .tcard .tx b{font-size:16px;font-weight:600;display:block}
 .tcard .tx span{font-size:12px;color:var(--muted);font-weight:500}
+.tcard.soon{opacity:.85;cursor:default}.tcard.soon .im::after{content:"";position:absolute;inset:0;background:rgba(255,246,236,.35)}
+.soon-note{display:flex;flex-direction:column;gap:2px;background:#FFF1DA;border:2px dashed var(--amber);border-radius:20px;padding:14px 18px;position:relative}.soon-note b{font-size:18px;font-weight:700;color:#8C5A00}.soon-note span{font-size:15px;font-weight:500}
+.soonbadge{position:absolute;inset-inline-start:20px;top:20px;background:rgba(255,255,255,.9);color:var(--terra-d);font-size:12px;font-weight:700;padding:4px 12px;border-radius:99px}
 .pill{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:99px;background:#E3F1E7;color:#2F6347}
 .pill.todo{background:#FFE9C7;color:#8C5A00}
 /* player */
