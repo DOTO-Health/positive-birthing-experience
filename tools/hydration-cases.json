@@ -1,0 +1,13 @@
+{
+  "_note": "SAMPLE cases that match the SAMPLE thresholds in app/data/hydration-rules.json. When the clinical advisory board signs off the real thresholds, replace this table with the signed-off one (see QA_PROCESS.md section 4.2). Changes to this file need clinical review.",
+  "cases": [
+    { "temp": 98.6, "pulse": 80,  "expect": "normal" },
+    { "temp": 99.4, "pulse": 100, "expect": "normal" },
+    { "temp": 99.5, "pulse": 80,  "expect": "attention" },
+    { "temp": 98.6, "pulse": 101, "expect": "attention" },
+    { "temp": 100.3, "pulse": 119, "expect": "attention" },
+    { "temp": 100.4, "pulse": 80,  "expect": "alert" },
+    { "temp": 98.6, "pulse": 120, "expect": "alert" },
+    { "temp": 104.0, "pulse": 150, "expect": "alert" }
+  ]
+}

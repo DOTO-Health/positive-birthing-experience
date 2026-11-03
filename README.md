@@ -1,238 +1,171 @@
-<a id="readme-top"></a>
-
 # Positive Birthing Companion
 
 [![License: Code](https://img.shields.io/badge/code%20license-Apache--2.0-blue.svg)](./LICENSE.md)
 [![License: Content](https://img.shields.io/badge/content%20license-CC%20BY--SA%204.0-lightgrey.svg)](#licensing)
-[![Status](https://img.shields.io/badge/status-work--in--progress-yellow.svg)](#status--roadmap)
+[![Status](https://img.shields.io/badge/status-phase--1--prototype--v0.1-yellow.svg)](#status--roadmap)
 
-An offline-first digital companion for the labour room that translates WHO's evidence-based guidance
-on positive childbirth experiences into simple, actionable bedside interactions for nurses and
-midwives.
-
-Built by Doto Health, as part of the **UNICEF FemTech Ventures** positive-birthing-experience
-initiative.
-
-> ⚠️ **Clinical disclaimer:** This solution is a **support tool**, not a diagnostic or
-> treatment tool. Hydration Check produces a prompt for further assessment, not a diagnosis.
-> Learn provides general health education, not personalised medical advice. Clinical judgment
-> stays with the healthcare worker at all times.
-
-> 🚧 **Status:** This project has just started. Most of the pipeline, code, and clinical content
-> described below is planned, not yet built or published. See [Status & Roadmap](#status--roadmap).
+**An open-source, offline-first companion for the labour room.** It puts WHO's positive-childbirth
+practices in the hands of nurses and midwives at the bedside: sip reminders, comfort and movement
+guidance, short evidence cards, in 13 Indian languages. No accounts, no patient data, no AI.
 
 **[Project Charter](./PROJECT_CHARTER.md)** · [Architecture](./ARCHITECTURE.md) · [Developer Docs](https://doto-health.github.io/positive-birthing-experience/)
 
----
+> **Status: Phase 1 prototype (v0.1).** The app runs and is open for review, but its **clinical content
+> is draft and has not been clinically reviewed**: the hydration thresholds are samples, the
+> non-English text is machine-translated, and the learning cards await sign-off. **Do not use it with
+> patients yet.** See [QA_PROCESS.md](QA_PROCESS.md).
 
-## Table of Contents
+<p align="center">
+  <img src="docs/screenshots/home.png" alt="Home screen with four modules" width="48%">
+  <img src="docs/screenshots/hydration.png" alt="Hydration labour clock and optional check" width="48%">
+</p>
+<p align="center">
+  <img src="docs/screenshots/move.png" alt="Move and Ease video cards" width="48%">
+  <img src="docs/screenshots/learn.png" alt="Learn practice cards" width="48%">
+</p>
 
-- [About](#about)
-- [Modules](#modules)
-- [Solution Structure](#solution-structure)
-- [Licensing](#licensing)
-- [Status & Roadmap](#status--roadmap)
-- [Contributing](#contributing)
-- [License](#license)
+## Why this exists
 
----
+- About 140 million women give birth every year. Beyond survival, **how a woman is treated and what she
+  experiences during labour matters**: to her, her baby and her health afterwards.
+- WHO's 2018 guideline sets out 56 recommendations for a positive childbirth experience: a companion of
+  choice, respectful care, freedom to eat, drink and move, comfort measures, and avoiding unnecessary
+  interventions. But a long guideline is hard to use in the middle of a shift.
+- This project turns a small set of those practices into **simple actions a nurse can take in one or
+  two taps**, and makes it free for any facility to use, translate and adapt.
 
-## About
+Read the full background, evidence and references in the **[Concept Note](docs/CONCEPT_NOTE.md)**.
 
-The WHO _recommendations on intrapartum care for a positive childbirth experience (2018)_ and
-_recommendations on maternal and newborn care for a positive postnatal experience (2022)_ together
-include 56 intrapartum and 63 postnatal recommendations. This guidance is evidence-based, but
-impractical to consult mid-shift, at the bedside, in the next few minutes.
+## What it does
 
-Positive Birthing Companion closes that gap with an offline-first tablet/kiosk application, built
-around four modules, designed primarily for staff nurses and midwives (large touch targets, minimal
-text, one-or-two-tap navigation, usable while gloved and multitasking), with the labouring mother
-and her companion as secondary viewers.
+| Module           | What it gives the nurse                                                                                                                                                                                                                                                                                         |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Hydration**    | One tap starts a labour clock. At the facility's interval a soft chime and banner remind the nurse to offer sips, on any screen. _Offered_ or _She declined_: her choice, always. An optional temperature and pulse check returns Normal / Attention / Alert as a **prompt for assessment, never a diagnosis**. |
+| **Move & Ease**  | Breathing, relaxation, positions and stretches, as video cards that link to Creative Commons videos. Files are not bundled; cards show "coming soon" until a licensed file exists.                                                                                                                              |
+| **Learn**        | Ten swipeable practice cards (respect, companion, sips, movement, skin-to-skin, when to call for help), each with its source.                                                                                                                                                                                   |
+| **Sound & Calm** | Comfort music in three categories. **Coming soon**: no track is currently licensed for open redistribution.                                                                                                                                                                                                     |
 
-It does not diagnose, treat, or make autonomous clinical decisions. It surfaces evidence-based
-comfort practices and assessment prompts; clinical judgment stays with the healthcare worker.
+**Also:** a greeting that follows the clock, 13 languages with right-to-left support (English, Hindi,
+Kannada, Tamil, Malayalam, Telugu, Marathi, Gujarati, Assamese, Odia, Bengali, Punjabi, Urdu), anonymous
+per-shift counters, installable as an app, and works with no network after the first load.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+## Try it
 
-## Modules
+You need only **Node 20 or newer** to run the development server. The app itself is static files.
 
-- **Sound & Calm** — curated, evidence-informed relaxation music (Calm / Instrumental / Spiritual)
-- **Hydration Check** — temperature/pulse entry with a rule-based hydration prompt (an assessment cue, not a diagnosis)
-- **Move & Ease** — guided breathing, movement, and relaxation videos
-- **Learn** — short, WHO-sourced answers to common pregnancy, labour, and postnatal questions, with search
-
-Content works offline and is planned to ship in 13 Indian languages at launch.
-
-See [Architecture](./ARCHITECTURE.md) for how each module is planned to fit together technically —
-flagged there as design-stage, since no code has been published yet.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## Solution Structure
-
-This is the planned layout. No application code has been published yet — see
-[Status & Roadmap](#status--roadmap).
-
-```
-.
-├── ARCHITECTURE.md
-├── CODE_OF_CONDUCT.md
-├── CONTRIBUTING.md
-├── LICENSE.md
-├── MAINTAINERS.md
-├── PROJECT_CHARTER.md
-├── QA_PROCESS.md
-├── README.md
-├── app                 # application code
-│   ├── README.md
-│   ├── assets
-│   │   ├── audio
-│   │   │   ├── blessing.mp3
-│   │   │   ├── blossom.mp3
-│   │   │   ├── celebration-of-life.mp3
-│   │   │   ├── earth.mp3
-│   │   │   ├── floating.mp3
-│   │   │   ├── hypnobirthing-breathing.mp3
-│   │   │   ├── motion.mp3
-│   │   │   ├── movement.mp3
-│   │   │   ├── mozart-effect.mp3
-│   │   │   ├── pregnancy-music.mp3
-│   │   │   ├── relaxing-432-untitled.mp3
-│   │   │   ├── sanctuary.mp3
-│   │   │   ├── the-deep.mp3
-│   │   │   ├── timing.mp3
-│   │   │   └── tuning.mp3
-│   │   └── logo.png
-│   ├── css
-│   │   └── styles.css
-│   ├── data
-│   │   ├── facts.json
-│   │   ├── hydration-rules.json
-│   │   ├── learn.json
-│   │   ├── tracks.json
-│   │   └── videos.json
-│   ├── index.html
-│   ├── js
-│   │   ├── app.js
-│   │   ├── art.js
-│   │   ├── core.js
-│   │   ├── home.js
-│   │   ├── hydration.js
-│   │   ├── learn.js
-│   │   ├── move.js
-│   │   ├── player.js
-│   │   └── sound.js
-│   ├── locales
-│   │   ├── archive
-│   │   │   ├── brx.json
-│   │   │   ├── doi.json
-│   │   │   ├── kok.json
-│   │   │   ├── ks.json
-│   │   │   ├── mai.json
-│   │   │   ├── mni.json
-│   │   │   ├── ne.json
-│   │   │   ├── sa.json
-│   │   │   ├── sat.json
-│   │   │   └── sd.json
-│   │   ├── as.json
-│   │   ├── bn.json
-│   │   ├── en.json
-│   │   ├── gu.json
-│   │   ├── hi.json
-│   │   ├── index.json
-│   │   ├── kn.json
-│   │   ├── ml.json
-│   │   ├── mr.json
-│   │   ├── or.json
-│   │   ├── pa.json
-│   │   ├── ta.json
-│   │   ├── te.json
-│   │   └── ur.json
-│   ├── manifest.webmanifest
-│   └── sw.js
-├── assets
-│   └── doto-trademark.jpeg
-├── docs
-│   ├── _config.yml
-│   ├── assets
-│   │   └── doto-trademark.jpeg
-│   ├── getting-started.md
-│   ├── index.md
-│   └── model-setup.md
-└── tools
-    └── serve.mjs
+```bash
+node tools/serve.mjs 8080      # then open http://localhost:8080
 ```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+- Add `?demo=1` to the address for a 1-minute sip-reminder interval, handy for demos.
+- Use the bundled server rather than `python -m http.server`: media seeking needs HTTP Range support.
+- For a kiosk or tablet, serve the `app/` folder from any static host and install it as a PWA.
+- Run the checks and tests with `npm run ci` (or `node tools/check-content.mjs` and `node --test`).
 
-## Licensing
+## Repository map
 
-This project is built to qualify as a **Digital Public Good (DPG)**. It uses a dual-track approach
-because it bundles application code and media/educational content, which the DPG Standard treats
-differently:
+```
+app/            the web app (index.html, js/, css/, data/, locales/, assets/)
+docs/           concept note and screenshots
+legal/          third-party credits and licence evidence
+LICENSES/       full licence texts
+research/       evidence base, licence research, content candidates
+tests/          unit tests, including the hydration test-case table
+tools/          dev server and CI scripts
+mockups/        approved UI mockups
+.github/        CI workflow and pull-request template
+```
 
-| Component                          | License                                                            | Why                                                                                                                      |
-| ---------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| Application code                   | **Apache License 2.0**                                             | Permissive adoption by health systems, NGOs, and government digital-health programmes; includes an express patent grant. |
-| Music, video & educational content | **Creative Commons (CC BY or CC BY-SA 4.0)**, CC0 where applicable | Matches how the DPG Standard treats non-software content; keeps localisation/adaptation legally simple.                  |
+## Edit the content
 
-Full DPG registration is tracked as an open item ahead of broader release. See
-[PROJECT_CHARTER.md](./PROJECT_CHARTER.md#why-this-license-digital-public-good-compatible-dual-track)
-for the full rationale.
+Content is separate from code, so clinicians, translators and designers can contribute without
+touching JavaScript.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+| To change                                                | Edit                                                                                 | Clinical review?          |
+| -------------------------------------------------------- | ------------------------------------------------------------------------------------ | ------------------------- |
+| Sip reminder intervals, temperature and pulse thresholds | `app/data/hydration-rules.json`                                                      | **Yes**                   |
+| Learning cards                                           | `app/data/learn.json` and the card strings in `app/locales/*.json`                   | **Yes**                   |
+| Health claims on the home screen                         | `app/data/facts.json`                                                                | **Yes**                   |
+| Videos offered                                           | `app/data/videos.json`                                                               | **Yes**                   |
+| Translations                                             | `app/locales/<code>.json`                                                            | **Yes** for clinical text |
+| Music                                                    | `app/data/tracks.json` (licensed tracks only; record each in `legal/ATTRIBUTION.md`) | Licence check             |
+| Interface layout and styling                             | `app/css/`, `app/js/`                                                                | Technical review only     |
 
-## Status & Roadmap
+## Quality and clinical review
 
-This project has just started. Nothing below is confirmed unless checked off.
+Every pull request into `main` gets a **technical (code) review**. Any pull request that touches
+clinical content also gets a **clinical review** by a qualified reviewer, and CI enforces that a
+clinical sign-off was recorded. One cannot override the other. Details, checklists and what counts as
+clinical content are in **[QA_PROCESS.md](QA_PROCESS.md)**; how the app is built is in
+**[ARCHITECTURE.md](ARCHITECTURE.md)**.
 
-**Phase 1 — Core Product (planned)**
+## Digital Public Good
 
-- [ ] Four core modules: Sound & Calm, Hydration Check, Move & Ease, Learn
-- [ ] Offline-first functionality
-- [ ] Manual entry of maternal vitals (Hydration Check)
-- [ ] Support for 13 Indian languages
-- [ ] Hydration Check thresholds clinically validated
-- [ ] Learn FAQ library curated and clinically reviewed
-- [ ] Music & video content sourced/commissioned and licensed
-- [ ] Clinical/Obstetric Advisory Board formed and signed off
+This project is built to be a **Digital Public Good**: open licences, no vendor lock-in, no personal
+data, adaptable to new languages and settings. It is **not yet registered** with the Digital Public
+Goods Alliance. [ARCHITECTURE.md](ARCHITECTURE.md#8-digital-public-good-alignment) maps the project to the
+nine indicators of the [DPG Standard](https://digitalpublicgoods.net/standard/) with an honest status for each.
 
-**Future Scope (not started, per PRD)**
+## Licences
 
-- [ ] Labour-room TV / display casting
-- [ ] Integration with bedside monitoring devices and EMR systems
-- [ ] Clinician-facing dashboards
-- [ ] Additional regional language and content packs
-- [ ] Digital Public Good registration
+| What                                                                    | Licence                                                                                               |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| Source code (`app/js`, `app/css`, `tools`, `tests`)                     | Apache-2.0 ([LICENSE](LICENSE.md))                                                                    |
+| Our own content (translations, learning cards, artwork, research notes) | CC BY-SA 4.0 ([LICENSES/CC-BY-SA-4.0.txt](LICENSES/CC-BY-SA-4.0.txt))                                 |
+| Linked YouTube videos                                                   | Their creators' CC BY, credited in [legal/ATTRIBUTION.md](legal/ATTRIBUTION.md); not relicensed by us |
+| Logo and names                                                          | Trademarks of Doto Health, not open-licensed ([TRADEMARKS.md](TRADEMARKS.md))                         |
+| Music                                                                   | None included yet                                                                                     |
 
-**Open items requiring confirmation** (per PRD — not yet decided): product name confirmation,
-pilot facility & geography, clinical advisory board members, Hydration Check threshold values,
-exercise content source/owner, music library finalization, language rollout sequence, data
-retention approach.
+**No audio or video files are stored in this repository.** Earlier test music was removed because none of
+it was licensed for public redistribution ([research/audio-licences.md](research/audio-licences.md)).
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+## Privacy
+
+No accounts, no patient names, phone numbers or IDs, and no analytics. The chosen language, the labour
+clock and anonymous shift counters are stored **only on the device**. The only external request is the
+font stylesheet, loaded from Google Fonts on first visit. Longitudinal patient records are out of scope
+for this phase and would need their own privacy and consent design under India's DPDP Act, 2023.
+
+## Roadmap and open items
+
+**Needed before any clinical use**
+
+- Form the Clinical/Obstetric Advisory Board; validate the hydration thresholds; approve the learning cards and video picks
+- Native-speaker and clinical review of all 13 languages
+
+**Next**
+
+- Licensed music (CC0 or CC BY) for Sound & Calm
+- An in-app credits screen; bundle the font files for a fully offline first load
+- Accessibility audit and usability testing with nurses and midwives
+- Export of anonymous counters (a Digital Public Good indicator) and a privacy notice
+- Confirm the code licence (the Project Charter says Apache-2.0, the PRD said MIT)
+
+**Later**
+
+- Labour-room display casting; EMR and bedside-monitor integration; clinician dashboards; more languages
 
 ## Contributing
 
-This project is pre-alpha; architecture and code have not been published yet. See
-[CONTRIBUTING.md](./CONTRIBUTING.md) for how contributions will be handled, and
-[QA_PROCESS.md](./QA_PROCESS.md) for how clinical content will be evaluated once available.
+Contributions are welcome: code, translations, clinical review, accessibility or evidence.
 
-All contributors are expected to follow the [Code of Conduct](./CODE_OF_CONDUCT.md).
+1. Open an issue or a draft pull request describing the change.
+2. For clinical content, **cite your source** (WHO recommendation, guideline or review) and never mark
+   content as "validated" yourself.
+3. Fill in the pull-request template. CI must pass; clinical changes also need a recorded clinical review.
+4. Third-party content must have a verified open licence recorded in `legal/ATTRIBUTION.md`.
 
-## License
+Read [QA_PROCESS.md](QA_PROCESS.md) first. If you think content is clinically wrong or unsafe, open an
+issue labelled `clinical-safety`; these are triaged before anything else.
 
-Code licensed under the [Apache License 2.0](./LICENSE.md). Music, video, and educational content
-licensed separately under Creative Commons — see [Licensing](#licensing).
+## Acknowledgements
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+Developed by Doto Health as part of the UNICEF FemTech Ventures positive-birthing-experience initiative.
+Evidence draws on WHO guidelines and Cochrane reviews listed in the [Concept Note](docs/CONCEPT_NOTE.md).
+Mention of these organisations does not imply their endorsement of this project.
 
-## Contact
+## Disclaimer
 
-DOTO Software - software@dotohealth.com
-
-Project Link: [https://github.com/DOTO-Health/positive-birthing-experience.git](https://github.com/DOTO-Health/positive-birthing-experience.git)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
----
+This software supports, and does not replace, the clinical judgement of qualified health workers. It does
+not diagnose or treat any condition. Clinical content is a draft until reviewed under
+[QA_PROCESS.md](QA_PROCESS.md).

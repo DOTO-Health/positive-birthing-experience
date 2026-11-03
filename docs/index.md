@@ -11,9 +11,10 @@ duplicated.
 > ⚠️ **Clinical disclaimer:** this project is a support tool. It does not diagnose, treat, or make
 > autonomous clinical decisions. Clinical judgment stays with the healthcare worker.
 
-> 🚧 **Status:** this project has just started. There is no published application code yet. See
-> [Status and Roadmap](https://github.com/DOTO-Health/positive-birthing-experience/blob/main/README.md#status--roadmap)
-> in the README for current progress.
+> **Status: Phase 1 prototype (v0.1).** The app runs and is open for review, but its **clinical content
+> is draft and has not been clinically reviewed**: the hydration thresholds are samples, the
+> non-English text is machine-translated, and the learning cards await sign-off. \*\*Do not use it with
+> patients yet.
 
 ## Start Here
 

@@ -44,7 +44,7 @@ The recurring principle across this and our other open maternal-health projects:
 
 Positive Birthing Companion is maintained by DOTO Health, with UNICEF FemTech Ventures as programme partner. The current maintainers and how to reach them are listed in [MAINTAINERS.md](./MAINTAINERS.md).
 
-Anyone is welcome to take part. Bug reports and feature requests go through the [GitHub issue templates](./.github/ISSUE_TEMPLATE):
+Anyone is welcome to take part. Bug reports and feature requests go through the [GitHub issue templates](./.github/ISSUE_TEMPLATE/bug-report---.md):
 [Report a issue](https://github.com/DOTO-Health/positive-birthing-experience/issues/new?labels=bug&template=bug-report---.md). Code and documentation changes come in as pull requests following [CONTRIBUTING.md](./CONTRIBUTING.md); changes to clinical content and logic also need sign-off from the Clinical/Obstetric Advisory Board. Contributions of media or educational content, including translations, must carry a compatible open licence and are reviewed before inclusion, as described above.
 
 Contributors with sustained, quality work in an area may be invited to become maintainers, as described in [MAINTAINERS.md](./MAINTAINERS.md). Everyone taking part is expected to follow [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md).

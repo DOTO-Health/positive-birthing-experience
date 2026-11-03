@@ -1,0 +1,15 @@
+{
+  "name": "positive-birthing-companion",
+  "version": "0.1.0",
+  "description": "Offline-first labour-room companion for nurses and midwives (Digital Public Good)",
+  "private": true,
+  "type": "module",
+  "license": "Apache-2.0",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node tools/serve.mjs 8080",
+    "check": "node tools/check-content.mjs",
+    "test": "node --test",
+    "ci": "node tools/check-content.mjs && node --test"
+  }
+}

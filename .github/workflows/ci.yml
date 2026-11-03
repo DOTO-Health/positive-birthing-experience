@@ -1,0 +1,111 @@
+# Continuous integration for Positive Birthing Companion.
+#
+# Every pull request into main must pass these checks (make them "required" in branch protection):
+#   - "Checks and tests (Node 22)"   technical gate: syntax, content, licence and policy checks, unit tests
+#   - "Smoke test"                   the app serves and the offline files are reachable
+#   - "Clinical review gate"         fails if clinical content changed and no clinical sign-off label is present
+#
+# The clinical gate only records that a human clinical review happened. Reviewers and labels are
+# described in QA_PROCESS.md. No secrets are used and the token is read-only.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+    # re-run the clinical gate when a maintainer adds or removes a label
+    types: [opened, synchronize, reopened, labeled, unlabeled]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  checks:
+    name: Checks and tests (Node ${{ matrix.node }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        node: [20, 22]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: JavaScript syntax check
+        run: find app tools tests \( -name '*.js' -o -name '*.mjs' \) -print0 | xargs -0 -n1 node --check
+
+      - name: Content, licence and policy checks
+        # JSON validity, locale placeholders and key parity, learning cards, hydration rules,
+        # video and track licence records, no audio or video files committed, required licence
+        # files, service-worker cache list, relative Markdown links, basic secret scan.
+        run: node tools/check-content.mjs
+
+      - name: Unit tests (hydration rules, reminder timing, greeting periods)
+        run: node --test
+
+  smoke:
+    name: Smoke test
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Start the dev server
+        run: |
+          node tools/serve.mjs 8080 &
+          for i in $(seq 1 20); do curl -sf http://localhost:8080/ >/dev/null && exit 0; sleep 1; done
+          echo "server did not start"; exit 1
+
+      - name: Core files are served
+        run: |
+          for path in index.html manifest.webmanifest sw.js css/styles.css js/app.js js/core.js \
+                      data/hydration-rules.json data/learn.json data/videos.json data/tracks.json \
+                      locales/index.json assets/logo.png; do
+            curl -sf -o /dev/null "http://localhost:8080/$path" || { echo "missing: $path"; exit 1; }
+          done
+
+      - name: Every listed language file is served
+        run: |
+          for code in $(node -e "console.log(require('./app/locales/index.json').languages.map(l => l.code).join(' '))"); do
+            curl -sf -o /dev/null "http://localhost:8080/locales/$code.json" || { echo "missing locale: $code"; exit 1; }
+          done
+
+      - name: HTTP Range requests work (needed for audio and video seeking)
+        run: |
+          status=$(curl -s -o /dev/null -w '%{http_code}' -H 'Range: bytes=0-99' http://localhost:8080/assets/logo.png)
+          test "$status" = "206" || { echo "expected 206, got $status"; exit 1; }
+
+  clinical-gate:
+    name: Clinical review gate
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Require a clinical sign-off when clinical content changes
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          LABELS: ${{ join(github.event.pull_request.labels.*.name, ',') }}
+        run: node tools/clinical-gate.mjs "$BASE_SHA" "$HEAD_SHA" "$LABELS"
